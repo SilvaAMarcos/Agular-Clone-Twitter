@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
@@ -10,6 +9,7 @@ import { PostComponent } from './components/post/post.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {MessagesService} from './services/messages.service'
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,6 +23,7 @@ rounded-lg shadow p-6 mb-8">
 
             <!-- Textarea -->
             <textarea 
+            (keyup.enter)="sendTweet()"
             [(ngModel)]="tweetMessage"
             (input)="changeTweet()"
             maxlength="240"
